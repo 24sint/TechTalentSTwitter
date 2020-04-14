@@ -1,5 +1,11 @@
-<div th:fragment="head-styling">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-    <link rel="stylesheet" href="/custom.css">
-</div>
+$(document).ready(function() {
+  $('.unfollow_btn').hover(function(){
+    $(this).removeClass('btn-primary');
+    $(this).addClass('btn-danger');
+    $(this).html("Unfollow");
+  }, function(){
+    $(this).html("Following");
+    $(this).removeClass('btn-danger');
+    $(this).addClass('btn-primary');
+  });
+})
